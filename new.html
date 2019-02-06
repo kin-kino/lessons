@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <script>
+            class Worker {
+                constructor(name,surname,rate,days) {
+                    this._name = name;
+                    this._surname = surname;
+                    this._rate = rate;
+                    this._days = days;
+                }
+                getSalary() {
+                    return this._rate*this._days;
+                }
+                getName(){
+                    return this._name;
+                }
+                getSurname(){
+                    return this._surname;
+                }
+                getRate(){
+                    return this._rate;
+                }
+                getDays(){
+                    return this._days;
+                }
+                setDays(days){
+                    return this._days = days;
+                }
+                setRate(rate){
+                    return this._rate = rate;
+                }
+            }              
+
+            var worker = new Worker('Иван', 'Иванов', 10, 31);
+
+//           console.log(worker.getName());
+//            console.log(worker.getSurname());
+            console.log(worker.getRate());
+            console.log(worker.getDays());
+            console.log(worker.getSalary());
+            worker.setRate(20);
+            worker.setDays(10);
+            console.log(worker.getSalary());
+
+
+           // console.log(worker2.name); //обращение к свойству
+           // console.log(ZPsumm);
+           // console.log(worker1.getName()); //jобращение к методу
+
+        </script>
+    </body>
